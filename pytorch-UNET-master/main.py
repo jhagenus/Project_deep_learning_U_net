@@ -40,7 +40,7 @@ parser.add_argument('--norm', type=str, default='inorm', dest='norm')
 parser.add_argument('--name_data', type=str, default='em', dest='name_data')
 
 parser.add_argument('--num_epoch', type=int,  default=500, dest='num_epoch')
-parser.add_argument('--batch_size', type=int, default=4, dest='batch_size')
+parser.add_argument('--batch_size', type=int, default=1, dest='batch_size')
 
 parser.add_argument('--lr_G', type=float, default=1e-4, dest='lr_G')
 

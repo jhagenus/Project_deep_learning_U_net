@@ -24,7 +24,7 @@ class Train:
         self.dir_log = args.dir_log
 
         self.name_data = args.name_data
-        self.dir_data = r'C:\Users\jeroe\Downloads\pytorch-UNET-master\pytorch-UNET-master\data'
+        self.dir_data = r'C:\Users\daans\OneDrive\Documenten\TU Delft\Master\Jaar 1\Periode 4\Seminar Computer Vision by Deep Learning\Project_deep_learning_U_net\pytorch-UNET-master\data'
         self.dir_result = args.dir_result
 
         self.num_epoch = args.num_epoch
@@ -56,11 +56,15 @@ class Train:
 
         self.gpu_ids = args.gpu_ids
 
-        if self.gpu_ids and torch.cuda.is_available():
-            self.device = torch.device("cuda:%d" % self.gpu_ids[0])
-            torch.cuda.set_device(self.gpu_ids[0])
-        else:
-            self.device = torch.device("cpu")
+        device = "cuda:0" if torch.cuda.is_available() else "cpu"
+
+        self.device = torch.device(device)
+
+        # if self.gpu_ids and torch.cuda.is_available():
+        #     self.device = torch.device("cuda:%d" % self.gpu_ids[0])
+        #     torch.cuda.set_device(self.gpu_ids[0])
+        # else:
+        #     self.device = torch.device("cpu")
 
     def save(self, dir_chck, netG, optimG, epoch):
         if not os.path.exists(dir_chck):

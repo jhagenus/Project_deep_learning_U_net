@@ -4,7 +4,8 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 ##
-dir_data = r'C:\Users\jeroe\Downloads\pytorch-UNET-master\pytorch-UNET-master\data'
+dir_data = r'C:\Users\daans\OneDrive\Documenten\TU Delft\Master\Jaar 1\Periode 4\Seminar Computer Vision by Deep Learning\Project_deep_learning_U_net\pytorch-UNET-master\data\em'
+
 
 name_target = 'train-labels.tif'
 name_data = 'train-volume.tif'

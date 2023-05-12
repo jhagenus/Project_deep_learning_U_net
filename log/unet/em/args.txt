@@ -1,7 +1,7 @@
 ----------------------------------------
             PARAMETER TABLES            
 ----------------------------------------
-batch_size :                         4
+batch_size :                         1
 beta1 :                            0.5
 data_type :                    float32
 dir_checkpoint :         ./checkpoints
